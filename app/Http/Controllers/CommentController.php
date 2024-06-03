@@ -7,9 +7,10 @@ use App\Http\Requests\CommentRequest;
 use App\Models\Comment;
 use App\Models\Article;
 
+
 class CommentController extends Controller
 {
-      //コメント投稿
+    //コメント投稿
     public function store(Request $request,Article $article)
     {
         $input = $request['comment'];
@@ -21,4 +22,7 @@ class CommentController extends Controller
         return redirect()->route('article.show',$article);
     }
     
+    
+    
+
 }
