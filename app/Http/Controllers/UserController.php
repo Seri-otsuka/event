@@ -7,9 +7,10 @@ use App\Models\User;
 use App\Models\Article;
 use App\Models\relationship;
 
+
 class UserController extends Controller
 {
-      public function index(User $user)
+    public function index(User $user)
     {
         return $user->get();
     }
@@ -42,4 +43,5 @@ class UserController extends Controller
         ];
         return view('mypages.follower', $data);
     }
+    
 }
