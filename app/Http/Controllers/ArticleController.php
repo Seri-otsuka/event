@@ -13,8 +13,10 @@ use App\Models\Image;
 use Storage;
 use Cloudinary;
 
+
 class ArticleController extends Controller
 {
+    
     //記事表示一覧のメソッド
     public function article(Article $article, User $user)
     {
@@ -89,5 +91,6 @@ class ArticleController extends Controller
         ];
         return view('mypages.good', $data);
     }
+    
     
 }
