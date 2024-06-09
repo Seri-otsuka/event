@@ -18,8 +18,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-red-200">
             <div>
                 <a href="/">
-                    <div class="text-5xl font-mono text-white">すぷちゃ!</div>
-                    <div class="">-ヲタクのための押し布教アプリ-</div>
+                    <div class="text-5xl font-mono text-white">イベントレポ</div>
                 </a>
             </div>
 

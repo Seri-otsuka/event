@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Session Status -->
     <div class="flex justify-center">
-    <h1>すぷちゃへようこそ！</h1>
+    <h1>イベントレポ</h1>
     </div>
     <div class="flex justify-center">
          @if (Route::has('login'))
