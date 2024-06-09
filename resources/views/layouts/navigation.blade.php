@@ -6,7 +6,7 @@
                 <!-- ログインのレイアウト -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('article') }}">
-                        <h1 class="text-white text-xl">すぷちゃ</h1>
+                        <h1 class="text-white text-xl">イベントレポ</h1>
                     </a>
                 </div>
 
