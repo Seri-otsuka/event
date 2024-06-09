@@ -9,6 +9,7 @@ use App\Http\Controllers\GoodController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RelationshipController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\MessageController;
 
 
 
@@ -63,6 +64,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/followers', [UserController::class, 'followers'])->name('followers');
     Route::get('/profiles/create', [ProfileController::class, 'create'])->name('profile.create');
     Route::post('/mypage', [MypageController::class, 'store'])->name('profile.store');
+    Route::get('/messages', [MessageController::class, 'index']);
+    Route::post('/messages', [MessageController::class, 'store']);
     
 });
 

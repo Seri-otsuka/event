@@ -1,7 +1,16 @@
-import './bootstrap';
+import Echo from "laravel-echo";
+window.Pusher = require('pusher-js');
 
-import Alpine from 'alpinejs';
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: process.env.MIX_PUSHER_APP_KEY,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    encrypted: true
+});
 
-window.Alpine = Alpine;
+Vue.component('chat-component', require('./components/ChatComponent.vue').default);
 
-Alpine.start();
+const app = new Vue({
+    el: '#app',
+});
+
