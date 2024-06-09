@@ -15,7 +15,6 @@ class Article extends Model
         'title',
         'text',
         'category_id',
-        'image',
         ];
     
     public function getPaginateByLimit(int $limit_count = 3)
