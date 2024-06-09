@@ -4,8 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Events\MessageSent;
 
 class Message extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['user_id', 'message'];
+
+    protected $dispatchesEvents = [
+        'created' => MessageSent::class,
+    ];
 }
