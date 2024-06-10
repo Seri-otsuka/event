@@ -11,7 +11,7 @@
         <body>
           <x-slot name="header">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    {{ $user_name }}さんのページ
+                    {{ $user_name }}
                 </h2>
             </x-slot>
             <div class="user">
@@ -36,7 +36,7 @@
                                              <div class="m-4">
                                                  <a href="/users/{{ $article->user->id }}">{{ $article->user->name }}</a>
                                              </div>
-                                              <div class="user-control m-3">
+                                              <!--<div class="user-control m-3">
                                                     @if (!Auth::user()->is_relationship($article->user_id))
                                                     <form action="{{ route('relationship.store', $article->user) }}" method="post">
                                                         @csrf
@@ -49,7 +49,7 @@
                                                         <x-primary-button>フォロー解除</x-primary-button>
                                                     </form>
                                                     @endif
-                                                </div>
+                                                </div>-->
                                             </div>
                                         </h2>
                                        <div class='article'>
