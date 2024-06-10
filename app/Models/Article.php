@@ -11,10 +11,11 @@ class Article extends Model
     use HasFactory;
     use SoftDeletes;
     
-     protected $fillable = [
+    protected $fillable = [
         'title',
         'text',
         'category_id',
+        'image',
         ];
     
     public function getPaginateByLimit(int $limit_count = 3)
@@ -43,4 +44,6 @@ class Article extends Model
     {
         return $this->hasMany(Image::class);
     }
+
+
 }
