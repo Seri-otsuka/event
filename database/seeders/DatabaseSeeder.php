@@ -37,5 +37,17 @@ class DatabaseSeeder extends Seeder
             'updated_at' => new DateTime(),
             'deleted_at' => null,
         ]);
+        
+         
+        DB::table('users')->insert([
+            'name' => 'テストユーザー',
+            'text' => null,
+            'email' => 'test@gmail',
+            'password' => bcrypt('password'),
+            'profile_photo_path' => null,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+            'deleted_at' => null,
+        ]);
     }
 }
