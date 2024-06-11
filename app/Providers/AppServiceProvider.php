@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use App\Models\Category; // 必要なモデルをインポート
 
 class AppServiceProvider extends ServiceProvider
 {

@@ -35,7 +35,7 @@
                                                         <img class="w-14 h-14 rounded-full object-cover border-none bg-gray-200" src="{{ $article->user->profile_photo_path }}">
                                                     @endif
                                                     <div class="m-4">
-                                                        <a href="/users/{{ $article->user->id }}">{{ $article->user->name }}</a>
+                                                        <a class= 'text-sm' href="/users/{{ $article->user->id }}">{{ $article->user->name }}</a>
                                                     </div>
                                                     <div class="user-control m-3">
                                                         @if (!Auth::user()->is_relationship($article->user_id))
@@ -57,9 +57,6 @@
                                                 <h1 class='title text-2xl ml-5'>
                                                     {{ $article->title }}
                                                 </h1>
-                                                <div class="ml-10 text-gray-400 text-right">
-                                                    投稿日：{{ $article->created_at }}
-                                                </div>
                                             </div>
                                             <div class=" m-4 text-lg">
                                                 <p class='text'>{!!nl2br($article->text)!!}</p>
@@ -70,6 +67,9 @@
                                             <button class="inline-flex items-center rounded-full bg-pink-50 px-4 py-2 text-base font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 my-3">
                                                 <a href="/categories/{{ $article->category->id }}">{{ $article->category->name }}</a>
                                             </button>
+                                            <div class="ml-10 text-gray-400 text-right">
+                                                    投稿日：{{ $article->created_at->format('Y-m-d H:i') }}
+                                                </div>
                                             <div align="right" class="flex justify-end">
                                                 @can('update', $article)
                                                     <div class="edit mx-3">
