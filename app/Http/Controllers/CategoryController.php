@@ -12,8 +12,12 @@ class CategoryController extends Controller
         return $category->get();
     }
     
-    public function index(Category $category)
-    {
-        return view('categories.index')->with(['articles' => $category->getByCategory()]);
+    public function index(Category $category){
+       
+       
+        $categories = Category::all();
+        return view('categories.index')->
+        with(['articles' => $category->getByCategory(),
+               'categories' => $categories]);
     }
 }
