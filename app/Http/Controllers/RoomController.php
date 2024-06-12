@@ -12,7 +12,7 @@ class RoomController extends Controller
         
         return view('room.index')->with([
             'users' => $user,
-            'rooms' => $room->getPaginateByLimit(20)]);
+            ]);
     }
     //DM表示ページ
     public function show(Room $room)

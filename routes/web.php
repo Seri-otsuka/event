@@ -10,6 +10,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RelationshipController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\EntryController;
+
 
 
 
@@ -30,7 +32,7 @@ use App\Http\Controllers\MessageController;
 });*/
 
 Route::post('/articles/{article}/comment', [CommentController::class, 'store'])->name('comments.store');
-Route::post('/rooms/{room}/message', [MessageController::class, 'store'])->name('messages.store');
+//Route::post('/rooms/{room}/message', [MessageController::class, 'store'])->name('messages.store');
 
 Route::get('/introductions', function () {
     return view('introductions.index');})->name('introduction');
@@ -66,8 +68,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/profiles/create', [ProfileController::class, 'create'])->name('profile.create');
     Route::post('/mypage', [MypageController::class, 'store'])->name('profile.store');
     Route::get('/rooms/{room}',[RoomController::class,'show'])->name('room.show');
-    Route::get('/entry', function () {return view('messages.entry');})->name('entry');
-    
+    //Route::get('/entry', function () {return view('messages.entry');})->name('entry');
+     //Route::get('/entry', [EntryController::class, 'entry'])->name('entry');
+   // Route::get('/rooms/{room}', [RoomController::class, 'show'])->name('room');
     
 });
 
