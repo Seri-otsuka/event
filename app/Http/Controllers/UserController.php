@@ -43,5 +43,6 @@ class UserController extends Controller
         ];
         return view('mypages.follower', $data);
     }
+
     
 }

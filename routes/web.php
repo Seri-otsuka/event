@@ -30,6 +30,7 @@ use App\Http\Controllers\MessageController;
 });*/
 
 Route::post('/articles/{article}/comment', [CommentController::class, 'store'])->name('comments.store');
+Route::post('/rooms/{room}/message', [MessageController::class, 'store'])->name('messages.store');
 
 Route::get('/introductions', function () {
     return view('introductions.index');})->name('introduction');
@@ -64,8 +65,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/followers', [UserController::class, 'followers'])->name('followers');
     Route::get('/profiles/create', [ProfileController::class, 'create'])->name('profile.create');
     Route::post('/mypage', [MypageController::class, 'store'])->name('profile.store');
-    Route::get('/messages', [MessageController::class, 'index']);
-    Route::post('/messages', [MessageController::class, 'store']);
+    Route::get('/rooms/{room}',[RoomController::class,'show'])->name('room.show');
+    Route::get('/entry', function () {return view('messages.entry');})->name('entry');
+    
     
 });
 
