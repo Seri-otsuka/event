@@ -53,14 +53,15 @@
                                                         @endif
                                                     </div>
                                                 </div>
+                                                <a href="{{ route('article.show', $article->id)}}">
                                             </h1>
                                             <div class="flex justify-between">
-                                                <h1 class='title text-xl ml-5'>
+                                                <h1 class='title text-xl ml-5  line-clamp-1'>
                                                     {{ $article->title }}
                                                 </h1>
                                             </div>
                                             <div class=" m-4 text-lg">
-                                                <p class='text-sm'>{!!nl2br($article->text)!!}</p>
+                                                <p class='text-sm  line-clamp-2'>{!!nl2br($article->text)!!}</p>
                                                     @if($article->image !== null)
                                                         <img class="object-contain rounded-lg aspect-auto w-60 h-30" src="{{ $article->image }}"/>
                                                     @endif
