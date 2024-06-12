@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
-    use SoftDeletes;
     
      protected $fillable = [
         'user1_id',
