@@ -37,7 +37,8 @@
                                                     <div class="m-4">
                                                         <a class= 'text-sm' href="/users/{{ $article->user->id }}">{{ $article->user->name }}</a>
                                                     </div>
-                                                    <div class="user-control m-3">
+                                                    <!--フォローボタンの位置変えた-->
+                                                    <div class="user-control m-3 ml-12">
                                                         @if (!Auth::user()->is_relationship($article->user_id))
                                                             <form action="{{ route('relationship.store', $article->user) }}" method="post">
                                                                 @csrf
@@ -54,12 +55,12 @@
                                                 </div>
                                             </h1>
                                             <div class="flex justify-between">
-                                                <h1 class='title text-2xl ml-5'>
+                                                <h1 class='title text-xl ml-5'>
                                                     {{ $article->title }}
                                                 </h1>
                                             </div>
                                             <div class=" m-4 text-lg">
-                                                <p class='text'>{!!nl2br($article->text)!!}</p>
+                                                <p class='text-sm'>{!!nl2br($article->text)!!}</p>
                                                     @if($article->image !== null)
                                                         <img class="object-contain rounded-lg aspect-auto w-60 h-30" src="{{ $article->image }}"/>
                                                     @endif
