@@ -63,7 +63,7 @@
                                             <div class=" m-4 text-lg">
                                                 <p class='text-sm  line-clamp-2'>{!!nl2br($article->text)!!}</p>
                                                     @if($article->image !== null)
-                                                        <img class="object-contain rounded-lg aspect-auto w-60 h-30" src="{{ $article->image }}"/>
+                                                        <img class="object-contain rounded-lg aspect-auto w-60 h-30 flexbox" src="{{ $article->image }}"/>
                                                     @endif
                                             </div>
                                             <button class="inline-flex items-center rounded-full bg-pink-50 px-4 py-2 text-base font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 my-3">
