@@ -35,7 +35,7 @@
                                                         <a class= 'text-sm' href="/users/{{ $article->user->id }}">{{ $article->user->name }}</a>
                                                     </div>
                                                     <!--フォローボタンの位置変えた-->
-                                                    <div class="user-control m-3 ml-12">
+                                                    <div class="user-control m-3 ml-8">
                                                         @if (!Auth::user()->is_relationship($article->user_id))
                                                             <form action="{{ route('relationship.store', $article->user) }}" method="post">
                                                                 @csrf

@@ -29,12 +29,14 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="/categories/2" :active="request()->routeIs('categories.show', ['category' => 2])">
-                        {{ __('ゲーム') }}
+                        {{ __('K-POP') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="/categories/3" :active="request()->routeIs('categories.show', ['category' => 3])">
-                        {{ __('K-POP') }}
+                        {{ __('ゲーム'
+                        
+                        ) }}
                     </x-nav-link>
                 </div>
                 <div class="ml-2">
