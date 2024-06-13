@@ -122,15 +122,15 @@
                         <div class="p-6 text-gray-900">
                             <div class="text-base">コメント欄</div>
                                     @foreach($article->comments()->latest()->get() as $comment)
-                                        <div class="display: flex border-b-2 border-gray-200 my-1">
+                                        <div class="display: flex my-1">
                                               @if($comment->user->profile_photo_path == null)
-                                                <img class="w-6 h-6 rounded-full object-cover border-none bg-gray-200" src="https://res.cloudinary.com/dlfimibcq/image/upload/v1695984855/aqeoyds9gl2qkhb5dtni.jpg">
+                                                <img class="w-10 h-10 rounded-full object-cover border-none bg-gray-200" src="https://res.cloudinary.com/dlfimibcq/image/upload/v1695984855/aqeoyds9gl2qkhb5dtni.jpg">
                                                 @else
-                                             <img class="w-6 h-6 rounded-full object-cover border-none bg-gray-400 mx-3" src="{{ $comment->user->profile_photo_path }}">
+                                             <img class="w-10 h-10 rounded-full object-cover border-none bg-gray-400 mx-3" src="{{ $comment->user->profile_photo_path }}">
                                                 @endif
-                                        <a href="/users/{{ $comment->user->id }}">{{ $comment->user->name }}</a>・{{ $comment->created_at->format('Y-m-d H:i') }}
+                                        <a class="mt-2 text-gray-400" href="/users/{{ $comment->user->id }}">{{ $comment->user->name }}　・　{{ $comment->created_at->format('Y-m-d H:i') }}</a>
                                         </div>
-                                       <div class="mx-4">
+                                       <div class="mx-4 ml-10">
                                            {{ $comment->text }}
                                        </div>
                                         @endforeach
