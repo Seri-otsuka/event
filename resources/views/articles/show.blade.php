@@ -53,9 +53,6 @@
                                  <h1 class='title text-2xl ml-5'>
                                     {{ $article->title }}
                                 </h1>
-                                 <div class="ml-10 text-gray-400 text-right">
-                                              投稿日：{{ $article->created_at }}
-                                </div>
                             </div>
                             <!--nullで入れてるのがあるからコードだけ書いてしまうとちっさいイラストだけ出る-->
                             <div class="flex justify-center rounded-lg">
@@ -72,6 +69,9 @@
                                 <a href="/categories/{{ $article->category->id }}">{{ $article->category->name }}</a>
                                 </button>
                             </div>
+                             <div class="ml-10 text-gray-400 text-right">
+                                              投稿日：{{ $article->created_at->format('Y-m-d H:i')  }}
+                                </div>
                             <!--いいねボタン-->
                             <div align="right" class="article-control mb-3">
                             @if (!Auth::user()->is_good($article->id))
@@ -128,7 +128,7 @@
                                                 @else
                                              <img class="w-6 h-6 rounded-full object-cover border-none bg-gray-400 mx-3" src="{{ $comment->user->profile_photo_path }}">
                                                 @endif
-                                        <a href="/users/{{ $comment->user->id }}">{{ $comment->user->name }}</a>・{{ $comment->created_at }}
+                                        <a href="/users/{{ $comment->user->id }}">{{ $comment->user->name }}</a>・{{ $comment->created_at->format('Y-m-d H:i') }}
                                         </div>
                                        <div class="mx-4">
                                            {{ $comment->text }}
