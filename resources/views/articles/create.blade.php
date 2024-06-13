@@ -36,7 +36,12 @@
                                     </select>
                                 </div>
                                  <div class="image my-3.5">
-                                     <x-input-label for="title" :value="__('画像')" />
+                                     <div class="flex">
+                                         <x-input-label for="title" :value="__('画像')" />
+                                      <p class=" text-sm text-gray-600 mb-3 ml-5">
+                                            {{ __("※画像データの大きいものは保存できない可能性があります。") }}
+                                        </p>
+                                     </div>
                                       <input type="file" name="image"   class="block w-full text-sm text-slate-500
                                               file:mr-4 file:py-2 file:px-4
                                               file:rounded-full file:border-0
