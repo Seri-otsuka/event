@@ -1,3 +1,4 @@
+
 <div class="flex mb-4" x-data="picturePreview()">
     <div class="mr-3">
         @if(Auth::user()->profile_photo_path === null)
@@ -11,6 +12,7 @@
         @endif
     </div>
     <div class="flex items-center">
+        <script src="//unpkg.com/alpinejs" defer></script>
         <button
                 x-on:click="document.getElementById('picture').click()"
                 type="button"
