@@ -39,6 +39,7 @@
                             <!--フォロー機能のテーブルからデータを取得して一覧を見れるようにしたい-->
                             <a href="{{ route('follows') }}"><x-primary-button>フォロー中</x-primary-button></a>
                             <a href="{{ route('followers') }}"><x-primary-button>フォロワー</x-primary-button></a>
+                             <a href="{{ route('profile.edit') }}"><x-primary-button>プロフィール</x-primary-button></a>
                         </div>
                     </div>
                 </div>
